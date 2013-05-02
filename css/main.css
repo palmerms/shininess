@@ -1,0 +1,375 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+	background:#734002 url(../img/bgrid.png);
+	}
+
+#wrap {
+	width:990px; margin:0 auto; box-shadow:10px 10px 50px #000, -10px -10px 50px #000; background:#fff;
+	}
+nav, main {
+	width:990px;
+	margin:0 auto;
+	}
+nav, #samples { border-top:8px double black; border-bottom:8px double black; } 
+h1, h2, ul {
+	margin:0;
+	}
+
+header {
+	width:930px; margin:0 auto;
+	padding:10px 30px;
+	}
+
+hgroup {
+/*	padding:120px 14px 14px; border:3px ridge gold; */
+	}
+	
+header h1 {
+	color:#f2c84b;
+	font:bold 3em/1.2em verdana, sans-serif;
+	text-shadow:6px 6px 6px #000, -1px -1px #fff;
+	/* Forgive me, HTML Gods */
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=130);
+	}
+header h2 {
+	font-style:italic;
+	color:#f2b705;
+	text-shadow:3px 3px 2px #000;
+	/* Forgive me, HTML Gods */
+	filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=130);
+	}
+nav {
+	background:#FFFCCF;
+	text-align:right;
+	}
+
+nav ul {
+	margin:0; padding:0;
+	}
+
+nav li { 
+	float:left; display:inline-block; margin:5px 10px 5px 30px;
+	}
+nav a:link, nav a:visited {
+	font:bold 1.2em verdana, sans-serif;
+	color:#000;
+	text-shadow:2px 2px 2px #999;
+	text-decoration:none;
+	}
+
+nav a:hover, nav a:active {
+	font:bold 1.2em verdana, sans-serif;
+	color:#444;
+	text-decoration:none;
+	text-shadow:2px 2px 2px #aaa;
+	}
+nav a:active {
+	position:relative;
+	top:2px;
+	}
+a:focus { outline:none }
+	
+.social {
+	display:inline-block; margin:5px 30px;
+	}
+	
+	
+main {
+	background:#000; position:relative; 
+	}
+
+main h2 {
+	font:bold italic 2em/1.1em Overlock, Georgia, serif; text-shadow:5px 5px 6px #000;
+	color:gold;
+	padding-top:140px;
+	}
+main h3 {
+	font-family:Overlock, Georgia, serif;
+	font-style:italic;
+	}
+#intro {
+	padding:30px; width:930px;
+	background: #582c00 url(../img/db2.png);	
+	color:#fff;
+	z-index:auto;
+	}
+
+#intro p, #intro h2 {
+	padding-bottom:0; margin:0;
+	}
+.carousel {
+	background:#FFFCCF url(../img/5.jpg) center center;
+	border:3px ridge gold;
+	padding:20px 30px;
+	box-shadow:10px 10px 20px #000 inset, -10px -10px 20px #000 inset, 2px 2px 2px #000;
+	}
+
+h3 {
+	margin:0; padding:0; font-weight:bold; text-align:center; text-shadow:1px 1px 1px #000;
+	color:#734002;
+	}
+#samples {
+	padding:20px 0;
+	background:#FFFCCF;
+	}
+.sample1 {
+	width:280px; left:20px; padding:10px; position:absolute;
+	}
+.sample2 {
+	width:280px; left:345px; padding:10px; position:absolute;
+	}
+.sample3 {
+	width:280px; left:670px; padding:10px; position:relative;
+	}
+
+h3 a:link, h3 a:visited {
+	color:#734002;
+	}
+h3 a:hover, h3 a:active {
+	color:gold;
+	}
+img.sample {
+	box-shadow:2px 2px 2px #000, 2px 2px 2px #000 inset; margin-bottom:1em;
+	border:3px ridge gold; width:274px; height:200px;
+	}
+img.sample:hover {
+	box-shadow:3px 3px 6px #000;
+	}
+img.sample:active {
+	box-shadow:1px 1px 10px #444;
+	}
+main a:link, main a:visited {
+	text-decoration:none;
+	}
+main a:active {
+	top:2px; position:relative;
+	}
+main a:hover, main a:active {
+	text-decoration: underline;
+	}
+	
+footer {
+	padding:30px; width:930px;
+	background: #582c00 url(../img/db2.png);	
+	color:#fff;
+	z-index:auto;
+	}
+
+footer h3 {
+	text-align:left;
+	color:gold;
+	font-family:Overlock, Georgia, serif;
+	font-style:italic;
+	}
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,657 @@
+/*
+Theme Name: Shininess
+Theme URI: http://www.aesiria.com
+Author: Matthew S Palmer
+Author URI: http://www.aesiria.com
+Description: Movie Review Theme
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags:
+*/
+
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+html, button, input, select, textarea { color: #222; }
+body { font-size: 1em; line-height: 1.4; }
+::-moz-selection { background: #b3d4fc; text-shadow: none; }
+::selection { background: #b3d4fc; text-shadow: none; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+img { vertical-align: middle; }
+fieldset { border: 0; margin: 0; padding: 0; }
+textarea { resize: vertical; }
+.chromeframe { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0; }
+
+
+
+
+/* ==========================================================================
+   Main Body Background and Layout Classes
+   ========================================================================== */
+body {
+	background:#c0c0c0;
+	}
+.fullwidth {
+	width:1170px;
+	margin:0 auto;
+	border-left:4px solid #000;
+	border-right:4px solid #000;
+	}
+
+/* ==========================================================================
+   Header Elements
+   ========================================================================== */
+/* #siteheader contains the title and slogan on every page. The title is a link to home. */	
+#siteheader {
+	padding:0;
+	text-align:right;
+	}
+#siteheader h1 {
+	color:red;
+	font:bold 3em/1.2em overlock, sans-serif;
+	}
+#siteheader a { color:inherit; text-decoration:none; }
+#siteheader h2 {
+	font-style:italic;
+	color:black;
+	}
+#siteheader h1, #siteheader h2 {
+	margin-right:30px;
+	}
+/* .pagetitle can be the category title or the post/page title */
+.pagetitle {
+	padding:30px; line-height:1em;
+	}
+.breadcrumb {
+	background:#888; list-style-type:none; line-height:30px; padding:0 30px; margin:2px 0 !important; border-top:2px solid #000; border-bottom:2px solid #000; 
+	}
+.breadcrumb li {
+	display:block;
+	margin:0 20px 0 0 !important;
+	padding:0 50px 0 0 !important;
+	float:left; line-height:30px; height:100%;
+	background:url(img/crumbarrow-b.png) no-repeat center right;
+	}
+.breadcrumb li.currentcrumb { height:100%; line-height:30px; padding:0; }
+
+/* ==========================================================================
+   Nav Menu
+   ========================================================================== */
+.menu1nav, .menu2nav { height:36px; border-top:4px solid #000; border-bottom:4px solid #000; background:url(img/navbg.png) repeat-x; }
+/* .menu1nav { position:fixed; top:0; left:50%; margin-left:-589px } */ /* Uncomment for fixed top menu */
+
+#wpadminbar { bottom:0 !important }
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu li {
+	position: relative;
+}
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+.sf-menu > li {
+	float: left;
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+
+/*** DEMO SKIN ***/
+.sf-menu {
+	float: left;
+	margin-bottom: 1em;
+}
+.sf-menu ul {
+	box-shadow: 2px 2px 6px rgba(0,0,0,.2);
+	min-width: 12em; /* allow long menu items to determine submenu width */
+	*width: 12em; /* no auto sub width for IE7, see white-space comment below */
+}
+.sf-menu a {
+	/* border-left: 1px solid #fff; */
+	/* border-top: 1px solid #dFeEFF; */ /* fallback colour must use full shorthand */
+	/* border-top: 1px solid rgba(255,255,255,.5); */
+	padding: 0 30px; /* default is .75em 1em */
+	text-decoration: none;
+	font-family:Georgia, serif;
+	line-height:36px;
+	zoom: 1; /* IE7 */	
+}
+.sf-menu a {
+	color: #000;
+}
+.sf-menu li {
+	background-color: auto; /* default is #BDD2FF; */
+	white-space: nowrap; /* no need for Supersubs plugin */
+	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
+	-webkit-transition: background .2s;
+	transition: background .2s;
+}
+.sf-menu ul li {
+	background: #eee;
+}
+.sf-menu ul ul li {
+	background: #ddd;
+}
+.sf-menu li:hover,
+.sf-menu li.sfHover {
+	background: #ccc; /* #CFDEFF; */
+	/* only transition out, not in */
+	-webkit-transition: none;
+	transition: none;
+}
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+}
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 5px solid transparent;
+	border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-top-color: rgba(255,255,255,.5);
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+	border-top-color: white; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+.sf-arrows ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(255,255,255,.5);
+}
+.sf-arrows ul li > .sf-with-ul:focus:after,
+.sf-arrows ul li:hover > .sf-with-ul:after,
+.sf-arrows ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
+}
+
+
+ul.sf-menu > li { background-color:transparent; }
+
+
+   
+/* ==========================================================================
+   Main Structure
+   ========================================================================== */   
+/* row contains the #content and #sidebar sections, while #content-full is full-width */
+#content, #content2, #content3 {
+	float:left;
+	padding:30px; 
+	background:#fff;
+	}	
+#content-full { 
+	padding:30px;
+	background:#fff;
+	}
+
+.row { 
+	/* display:table; */ 
+	width:1170px;
+	background:#aaa;
+	}
+ aside {
+	width:219.5px; border-left:1px solid #000; padding:30px; float:left; background:#fff;
+	}  
+
+/* ==========================================================================
+   Content Styling
+   ========================================================================== */
+#content img { max-width:548px; }
+#content { width:548px; }
+#content2 { width:829px; }
+#content3 { width:1110px; }
+.row { overflow:hidden; border-top:2px solid #000; border-bottom:2px solid #000; margin:2px 0; }	
+main { border-bottom:4px solid #000; background:#fff; }
+#titleheader { border-bottom:4px solid #000; }
+
+h1, h2, ul {
+	margin:0;
+	}   
+.sticky {
+	}
+.sticky:before {
+	content:'Featured Article:';
+	font:bold 1.2em Georgia, serif;
+	border-bottom:6px double #000;
+	display:block;
+	margin-bottom:10px;
+	}
+.sticky:after {
+	display:block;
+	content:' ';
+	margin-top:20px;
+	border-top:6px double #000;
+	}
+main * { word-wrap: break-word; }
+.byline { font-size:0.8em; color:#aaa; margin:0; }
+.posttitle { font:normal 2em Overlock, serif; margin:0; }
+aside ul { list-style-type:none; margin:0; padding:0; }
+
+h1 { font:bold 2em Overlock, serif; }
+h2 { font:bold 1.8em Overlock, serif; }
+h3 { font:bold 1.6em Overlock, serif; }
+h4 { font:bold 1.4em Overlock, serif; }
+
+tr { border-bottom:1px solid #666; }
+
+.attachment-featured { width:548px; height:283px; overflow:hidden; }
+
+
+h3 a:link, h3 a:visited {
+	color:#734002;
+	}
+h3 a:hover, h3 a:active {
+	color:#666;
+	}
+main a:link, main a:visited {
+	text-decoration:none;
+	}
+main a:hover, main a:active {
+	text-decoration: underline;
+	}
+
+a:focus { outline:none }
+	
+	
+main h3 {
+	font-family:Overlock, Georgia, serif;
+	font-style:italic;
+	}
+
+#intro p, #intro h2 {
+	padding-bottom:0; margin:0;
+	}
+
+a:link, a:visited {
+	text-decoration:none;
+	font-weight:bold;
+	color:inherit;
+	}
+a:hover, a:active {
+	font-weight:bold;
+	text-decoration:underline;
+	}
+article {
+	margin-bottom:30px;
+	}
+	
+h3 {
+	margin:0; padding:0; font-weight:bold;
+	color:#734002;
+	}
+
+article h3 {
+	text-align:left; font:bold 1.5em verdana, sans-serif; color:#444; text-shadow:none;
+	padding-left:30px; text-indent:-30px;
+	}	
+.sticky:before {
+	content:'Featured Article:';
+	font:bold 1.2em Georgia, serif;
+	border-bottom:6px double #000;
+	display:block;
+	margin-bottom:10px;
+	}
+.sticky:after {
+	display:block;
+	content:' ';
+	margin-top:20px;
+	border-top:6px double #000;
+	}
+main * { word-wrap: break-word; }
+.byline { font-size:0.8em; color:#aaa; margin:0; }
+.posttitle { font:normal 2em Overlock, serif; margin:0; }
+aside ul { list-style-type:none; margin:0; padding:0; }
+
+h1 { font:bold 2em Overlock, serif; }
+h2 { font:bold 1.8em Overlock, serif; }
+h3 { font:bold 1.6em Overlock, serif; }
+h4 { font:bold 1.4em Overlock, serif; }
+
+tr { border-bottom:1px solid #666; }
+
+.attachment-featured { width:548px; height:283px; overflow:hidden; }
+#content2 div.alignnone {
+	width: 815px !important; padding:5px 5px 0 5px; border:2px solid #000;
+	}
+#content2 img.size-full {
+	width: 815px !important;
+	}
+.wp-caption-text {
+	padding:0; margin:0;
+	text-align:center;
+	color:#888;
+	font-size:.9em;
+	}
+#content img.size-full { max-width:534px; }
+#content div.alignnone { width:534px !important; padding:5px 5px 0 5px; border:2px solid #000; }
+div.alignnone img, img.alignnone { width:100%; height:auto; }
+
+#content iframe { width:534px !important;}
+.pagination { width:100%; padding-bottom:30px; border-top:6px double #000; padding-top:10px; }
+.pagination li { list-style-type:none; display:inline-blcok; margin:0 2px; float:left; line-height:20px; border:1px solid #000; }
+.pagination span { display:inline-block; float:left; line-height:20px; margin-right:10px; } 
+.pagination li.current { background:#aaa; padding:0 5px; font-weight:bold; }
+.pagination a:link, .pagination a:visited { display:block; margin:0 auto; background:#000; color:#fff; padding:0 5px; }
+.pagination a:hover, .pagination a:active { background:#aaa; text-decoration:none; }
+
+/****************
+advanced comment styles
+****************/
+ 
+h3#comments,.comment-navigation,.comment-navigation:after,#respond:after,.comment-rss{display:block} 
+ol.commentlist{width:100%} 
+h3#comments,#respond h3{ } 
+ol.commentlist,li.authorcomment,li.comment,#respond h3,form#commentform,input#submit{margin:0}
+ol.commentlist,ol.commentlist ul,form#commentform{padding:0}  
+ol.commentlist{border-bottom:1px solid #ccc} 
+ol.commentlist ul{margin:0 0 0 20px} 
+li.authorcomment,li.comment,form#commentform textarea,form#commentform input{border:1px solid #ccc}
+li.authorcomment,li.comment{padding:10px 0 0 10px;list-style:none;border-bottom:none} 
+li.even{background:#eee } 
+li.odd{background:#ddd } 
+.bypostauthor {background:#aaa !important; color:#fff !important; } 
+ul.children ul{margin-left:20px} 
+ul.children li{border-right:none} 
+.vcard img{float:left;background:#c4c4c4} 
+.vcard img,.comment-navigation .newer a,.comment-navigation .older a{padding:5px} 
+.comment-meta,ol.commentlist li small,p.subscribe-to-comments label{position:relative} 
+.comment-meta,ol.commentlist li small{top:10px;left:10px} 
+.comment-text{margin:0 10px 0 0} 
+.reply,.comment-navigation .newer,input#submit{float:right} 
+.reply,.comment-navigation .newer a,.comment-navigation .older a,input#submit{background:#000} 
+.reply{margin:0 10px 10px 0} 
+a.comment-reply-link,.reply a:link,
+.comment-navigation .newer a,.comment-navigation .older a,input#submit{display:inline-block;text-align:center;cursor:pointer;color:#fff} 
+a.comment-reply-link,.reply a:link{padding:5px 0} a.comment-reply-link,.reply a:link,input#submit{width:70px} 
+a.comment-reply-link:hover,.reply a:hover,.comment-navigation .newer a:hover,
+.comment-navigation .older a:hover,input#submit:hover{background:#e7e7e7;text-decoration:none;color:#4c7faa;font-weight:bold} 
+a.comment-reply-link:hover,.reply a:hover,input#submit:hover{width:68px} 
+a.comment-reply-link:hover,.reply a:hover{padding:4px 0} 
+a.comment-reply-link:hover,.reply a:hover,.comment-navigation .newer a:hover,.comment-navigation .older a:hover{border:1px solid #4c7faa} 
+.comment-navigation{margin:10px 0 10px 0} .comment-navigation:after,#respond:after{content:".";height:0;visibility:hidden} 
+.clear{clear:both} 
+.comment-navigation .newer a:hover,.comment-navigation .older a:hover{padding:4px} 
+form#commentform textarea,form#commentform input{padding:2px 3px} 
+form#commentform textarea{width:442px} 
+input#submit{padding:5px 0 !important;border:0 !important} 
+input#submit,p.subscribe-to-comments input{outline:0} 
+input#submit:hover{padding:4px 0 !important;border:1px solid #4c7faa !important} 
+p.subscribe-to-comments{background:url('images/email_32.png') no-repeat} 
+p.subscribe-to-comments,.comment-rss{height:32px;text-indent:42px;padding:5px 0 0 0} 
+p.subscribe-to-comments input{margin:5px 3px 3px 3px !important;border:0} 
+p.subscribe-to-comments label{top:-2px;color:#666} 
+.comment-rss{background:url('images/rss_32.png') no-repeat} 
+.comment-text img { max-width:100% } 
+.comment { color:#000 }
+/*comment total stlying*/
+ 
+.comment-total{text-align: center;font-size: 1.5em;color: #fff;}
+.comment-total span{font-size: 2em;color: #800000;}
+
+/* ==========================================================================
+   Sidebar Styling
+   ========================================================================== */
+ aside h3 {
+	font:bold 1.5em/1.5em overlock, georgia, serif;
+	text-align:left;
+	color:#000;
+	border-bottom:1px solid #000;
+	text-shadow:none;
+	margin-bottom:5px;
+	}
+.widget {
+	padding-bottom:20px;
+	}
+.widget_recent_entries ul {
+	list-style-type:none;
+	padding:0; margin:5px 0;
+	}
+.widget_recent_entries li {
+	padding:0 0 .5em 30px;
+	text-indent:-30px;
+	}
+.post-date {
+	display:block; padding-left:30px;
+	font:italic .9em arial, sans-serif;
+	}
+.post-date:before {
+	content:'posted ';
+	}
+.product_list_widget li { 
+	padding:0 0 .5em 30px !important;
+	text-indent:-30px;
+	}
+	
+  
+   
+   
+
+/* ==========================================================================
+   Footer Styling
+   ========================================================================== */
+/* #sitefooter is the main footer that displays across every page on the site */
+#sitefooter {
+	padding:30px 0; 
+	background: #000;	
+	color:#fff;
+	}
+
+#sitefooter a:link, #sitefooter a:visited {
+	color:#000;
+	}
+	
+#sitefooter h3 {
+	text-align:left;
+	color:#000;
+	font-family:Overlock, Georgia, serif;
+	font-style:italic;
+	}
+/* When using a custom menu as a footer sitemap, this makes the top level items line up in columns */
+#menu-sitemap > li { 
+	display:inline-block;
+	float:left;
+	width:auto; margin-right:40px;
+	font-weight:bold;
+	text-align:left;
+	}
+#menu-sitemap ul {
+	padding-left:20px;
+	list-style-type:none;
+	}
+	
+.copy {
+	margin-top:20px;
+	text-align:center;
+	}
+
+	
+	
+	
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.ir { background-color: transparent; border: 0; overflow: hidden; *text-indent: -9999px; }
+.ir:before { content: ""; display: block; width: 0; height: 150%; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * { background: transparent !important; color: #000 !important; /* Black prints faster: h5bp.com/s */ box-shadow: none !important; text-shadow: none !important; }
+    a, a:visited { text-decoration: underline; }
+    a[href]:after { content: " (" attr(href) ")"; }
+    abbr[title]:after { content: " (" attr(title) ")"; }
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+    thead { display: table-header-group; /* h5bp.com/t */ }
+    tr, img { page-break-inside: avoid; }
+    img { max-width: 100% !important; }
+    @page { margin: 0.5cm; }
+    p, h2, h3 { orphans: 3; widows: 3; }
+    h2, h3 { page-break-after: avoid; }
+}
+
+
+
+/* EQUAL COLUMN LAYOUT */
+#content, #content2, aside { padding-bottom: 32767px; margin-bottom: -32767px }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#sr-table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #ddd; }
+
+
+
+/* thead and tfoot */
+
+#sr-table thead tr, #sr-table tfoot tr {
+	background: #ddd url(images/bg.png) repeat-x;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #aaa; }
+
+#sr-table td, #sr-table th {
+	padding: 2px 10px;
+	border-left: 1px solid #eee; }
+
+#sr-table td.date, #sr-table th.date, #sr-table tfoot td {
+	border-left: 0; }
+
+#sr-table th {
+	font-size: 1.1em; }
+
+#sr-table tfoot {
+	font-size: 0.9em; }
+
+#sr-table tfoot .sr-tips{
+	float: left;
+	padding: 0 3px; }
+
+#sr-table tfoot .sr-plugin {
+	float: right;
+	padding: 0 3px; }
+
+
+
+/* tbody */
+
+#sr-table tr.odd {
+	background: #f1f5fa; }
+	
+#sr-table tbody tr:hover {
+	background: #def;  }
+	
+#sr-table .hidden { display: none; }
+
+
+
+/* the following classes are applied by tablesorter.js */
+
+#sr-table thead .header {
+	background-image: url(images/sort.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer; }
+
+#sr-table thead .headerSortUp {
+	background-image: url(images/asc.gif); }
+
+#sr-table thead .headerSortDown {
+	background-image: url(images/desc.gif); }
+
+#sr-table thead .headerSortUp, #sr-table thead .headerSortDown {
+	background-color: #ddd; }
+
+
+/* css for sidebar functions */
+
+.sr-review { /* post title */
+	float: left; }
+
+.sr-rating { /* star images */
+	float: right; }
+
+.sr-clear { /* clear the floats */
+	clear: both; }
